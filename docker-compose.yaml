@@ -3,7 +3,6 @@ services:
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
@@ -13,10 +12,11 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./changelog:/changelog
+      - ./test_project:/liquibase/changelog
     command:
-      - "--url=jdbc:postgresql://postgres:5432/postgres"
-      - "--username=postgres"
-      - "--password=postgres"
-      - "--changelog-file=./test_project/example-changelog.sql"
-      - "update"
+      - update
+      - --changelog-file=changelog.sql
+      - --url=jdbc:postgresql://postgres:5432/postgres
+      - --username=postgres
+      - --password=postgres
+    working_dir: /liquibase/changelog
