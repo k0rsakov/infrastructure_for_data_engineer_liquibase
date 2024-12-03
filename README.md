@@ -2,16 +2,6 @@
 
 Статья на [habr](https://habr.com/ru/articles/863242/).
 
-Настройка окружения:
-```bash
-python3.12 -m venv venv && \
-source venv/bin/activate && \
-pip install --upgrade pip && \
-pip install poetry && \
-poetry lock && \
-poetry install
-```
-
 ___
 
 Если вам необходима консультация/менторство/мок-собеседование и другие вопросы по дата-инженерии, то вы можете
