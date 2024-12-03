@@ -1,6 +1,6 @@
 # Инфраструктура для Data-Engineer Liquibase
 
-Статья на [habr](https://habr.com/ru/articles/000000/).
+Статья на [habr](https://habr.com/ru/articles/863242/).
 
 Настройка окружения:
 ```bash
